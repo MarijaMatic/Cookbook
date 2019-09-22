@@ -20,7 +20,7 @@ public class Cookbook {
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn
+    @JoinColumn(name = "recipe_id")
     private List<Recipe> recipes;
     private String description;
 
