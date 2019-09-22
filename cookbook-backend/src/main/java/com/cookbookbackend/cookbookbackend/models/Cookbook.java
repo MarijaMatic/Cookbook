@@ -19,8 +19,7 @@ public class Cookbook {
 
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "recipe_id")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Recipe> recipes;
     private String description;
 
